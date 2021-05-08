@@ -1,5 +1,5 @@
-let redux = require("redux");
-let createStore = redux.createStore;
+const redux = require("redux");
+const createStore = redux.createStore;
 
 function counterReducer(state={value:0}, action) {
     switch(action.type) {
@@ -12,7 +12,7 @@ function counterReducer(state={value:0}, action) {
     }
 }
 
-let store = createStore(counterReducer);
+const store = createStore(counterReducer);
 
 store.subscribe(()=>console.log(store.getState()));
 
